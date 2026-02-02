@@ -7,10 +7,10 @@ import android.net.Uri
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.video.*
-import androidx.camera.video.recorder.QualitySelector
-import androidx.camera.video.recorder.Recorder
-import androidx.camera.video.recorder.Recording
-import androidx.camera.video.recorder.VideoRecordEvent
+import androidx.camera.video.QualitySelector
+import androidx.camera.video.Recorder
+import androidx.camera.video.Recording
+import androidx.camera.video.VideoRecordEvent
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner

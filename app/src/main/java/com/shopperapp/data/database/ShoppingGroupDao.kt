@@ -9,7 +9,7 @@ interface ShoppingGroupDao {
     @Query("SELECT * FROM shopping_groups WHERE id = :groupId")
     suspend fun getGroupById(groupId: String): ShoppingGroup?
 
-    @Query("SELECT * FROM shopping_groups WHERE :userId MEMBER OF memberIds")
+    @Query("SELECT * FROM shopping_groups WHERE createdBy = :userId OR memberIds LIKE ',' || :userId || ',' OR memberIds LIKE :userId || ',' OR memberIds LIKE ',' || :userId")
     fun getGroupsForUser(userId: String): Flow<List<ShoppingGroup>>
 
     @Query("SELECT * FROM shopping_groups WHERE createdBy = :userId")

@@ -18,7 +18,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlinx.coroutines.flow.collectLatest
 import javax.inject.Inject
 
@@ -76,7 +75,7 @@ fun CameraScannerComponent(
 
 @Composable
 private fun PermissionRequestScreen(
-    permission: androidx.compose.ui.graphics.vector.ImageVector,
+    permission: com.google.accompanist.permissions.PermissionState,
     permissionText: String,
     rationaleText: String
 ) {
@@ -174,7 +173,4 @@ private fun CameraView(
                 }
             }
     }
-}
-
-// Fix the permission state parameter type
 }
